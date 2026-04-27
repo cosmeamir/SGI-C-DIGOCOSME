@@ -1,0 +1,68 @@
+:root {
+  --school-cyan: #1ed8e9;
+  --school-blue: #4e6ff2;
+  --school-dark: #0c1d3a;
+  --school-light: #e9f8ff;
+}
+
+body {
+  background: #f6f9fc;
+  color: #14233f;
+}
+
+.bg-gradient-school {
+  background: linear-gradient(135deg, rgba(30,216,233,.88), rgba(78,111,242,.92));
+}
+
+.bg-school {
+  background: linear-gradient(90deg, var(--school-cyan), var(--school-blue));
+}
+
+.btn-school {
+  background: linear-gradient(90deg, var(--school-cyan), var(--school-blue));
+  color: #fff;
+  border: 0;
+}
+
+.btn-school:hover {
+  color: #fff;
+  opacity: .95;
+}
+
+.login-card {
+  width: min(96%, 440px);
+  border-radius: 1rem;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: calc(100vh - 56px);
+}
+
+.sidebar {
+  background: #fff;
+  border-right: 1px solid #e3eaf3;
+}
+
+.sidebar .nav-link {
+  color: #375071;
+  font-weight: 500;
+  border-radius: .7rem;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: var(--school-light);
+  color: #0f4ca9;
+}
+
+.content-wrap {
+  padding: 1.25rem;
+}
+
+.card-kpi {
+  border: 0;
+  border-left: 5px solid var(--school-cyan);
+  box-shadow: 0 6px 18px rgba(10, 35, 70, .08);
+}
