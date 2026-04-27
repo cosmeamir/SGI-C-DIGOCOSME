@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'sistema_escolar';
-$user = 'root';
-$pass = '';
+$dbname = 'u914400496_sistema';
+$user = 'u914400496_sistema_gestao';
+$pass = 'InstitutoMYJ2@26';
 
 try {
     $pdo = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8mb4", $user, $pass, [
