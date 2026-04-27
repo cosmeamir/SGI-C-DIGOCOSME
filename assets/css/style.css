@@ -1,21 +1,27 @@
 :root {
   --school-cyan: #1ed8e9;
   --school-blue: #4e6ff2;
-  --school-dark: #0c1d3a;
-  --school-light: #e9f8ff;
+  --shell-bg: #eef1f5;
+  --panel-bg: #ffffff;
+  --sidebar-bg: #111f2f;
+  --sidebar-bg-2: #0c1826;
+  --sidebar-text: #a9b7c8;
+  --sidebar-active: #1f3249;
+  --topbar-bg: #132434;
 }
 
-body {
-  background: #f6f9fc;
-  color: #14233f;
+body.app-shell {
+  background: var(--shell-bg);
+  color: #202a36;
 }
 
 .bg-gradient-school {
   background: linear-gradient(135deg, rgba(30,216,233,.88), rgba(78,111,242,.92));
 }
 
-.bg-school {
-  background: linear-gradient(90deg, var(--school-cyan), var(--school-blue));
+.topbar {
+  background: linear-gradient(90deg, var(--topbar-bg), #1b3148);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 
 .btn-school {
@@ -24,10 +30,7 @@ body {
   border: 0;
 }
 
-.btn-school:hover {
-  color: #fff;
-  opacity: .95;
-}
+.btn-school:hover { color: #fff; opacity: .95; }
 
 .login-card {
   width: min(96%, 440px);
@@ -36,33 +39,86 @@ body {
 
 .app-layout {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 260px 1fr;
   min-height: calc(100vh - 56px);
 }
 
 .sidebar {
-  background: #fff;
-  border-right: 1px solid #e3eaf3;
+  background: linear-gradient(180deg, var(--sidebar-bg), var(--sidebar-bg-2));
+  color: var(--sidebar-text);
+  border-right: 1px solid #21364d;
 }
+
+.sidebar .text-secondary { color: #7f93aa !important; }
 
 .sidebar .nav-link {
-  color: #375071;
+  color: var(--sidebar-text);
   font-weight: 500;
-  border-radius: .7rem;
+  border-radius: .55rem;
+  padding: .58rem .75rem;
+  transition: all .18s ease;
 }
 
-.sidebar .nav-link:hover,
+.sidebar .nav-link:hover {
+  color: #fff;
+  background: #1a2e45;
+}
+
 .sidebar .nav-link.active {
-  background: var(--school-light);
-  color: #0f4ca9;
+  background: linear-gradient(90deg, #243a53, #1b3147);
+  color: #fff;
+  box-shadow: inset 2px 0 0 var(--school-cyan);
 }
 
 .content-wrap {
-  padding: 1.25rem;
+  padding: 1rem 1.15rem;
 }
 
 .card-kpi {
-  border: 0;
-  border-left: 5px solid var(--school-cyan);
-  box-shadow: 0 6px 18px rgba(10, 35, 70, .08);
+  border: 1px solid #dce2ea;
+  border-left: 4px solid var(--school-cyan);
+  box-shadow: 0 2px 8px rgba(18, 36, 57, .05);
+  border-radius: .4rem;
+}
+
+.card, .table {
+  border-radius: .4rem;
+}
+
+.table {
+  border: 1px solid #dde3ea;
+  font-size: .88rem;
+}
+
+.table thead th {
+  background: #f6f8fb;
+  color: #405268;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  border-bottom: 1px solid #d8e0ea;
+}
+
+.table tbody td {
+  vertical-align: middle;
+  border-color: #e9eef5;
+}
+
+h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #2f435b;
+  font-weight: 700;
+}
+
+.form-control,
+.form-select {
+  border-radius: .35rem;
+  border-color: #cfd8e3;
+}
+
+@media (max-width: 991px) {
+  .app-layout { grid-template-columns: 1fr; }
+  .sidebar { border-right: 0; border-bottom: 1px solid #2a3f57; }
 }

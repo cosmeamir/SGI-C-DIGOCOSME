@@ -16,8 +16,9 @@ MVP completo em **PHP + MySQL + Bootstrap** para gerir o ciclo de:
 ## Instalação rápida
 1. Importar base de dados pronta:
    ```bash
-   mysql -u u914400496_sistema_gestao -p'InstitutoMYJ2@26' < database/sgi_pronto_importar.sql
+   mysql -u u914400496_sistema_gestao -p'InstitutoMYJ2@26' u914400496_sistema < database/sgi_pronto_importar.sql
    ```
+   > No phpMyAdmin/Hostinger: primeiro seleciona a BD `u914400496_sistema` e depois importa o ficheiro `database/sgi_pronto_importar.sql`.
 2. Credenciais já configuradas em `config/database.php`:
    - Host: `localhost`
    - BD: `u914400496_sistema`

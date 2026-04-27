@@ -1,9 +1,5 @@
--- DB pronta para importar no Hostinger/cPanel
--- Base: u914400496_sistema
-
-DROP DATABASE IF EXISTS u914400496_sistema;
-CREATE DATABASE IF NOT EXISTS u914400496_sistema CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE u914400496_sistema;
+-- DB pronta para importar no Hostinger/cPanel sem DROP DATABASE
+-- Importar dentro da base já criada: u914400496_sistema
 
 CREATE TABLE IF NOT EXISTS usuarios (
   id INT AUTO_INCREMENT PRIMARY KEY,

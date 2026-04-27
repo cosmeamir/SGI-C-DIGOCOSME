@@ -16,12 +16,12 @@ include __DIR__ . '/../includes/navbar.php';
 <div class="app-layout">
   <?php include __DIR__ . '/../includes/sidebar.php'; ?>
   <main class="content-wrap">
-    <h2 class="mb-4">Dashboard do Administrador</h2>
+    <h2 class="mb-3">Dashboard do Administrador</h2>
     <div class="row g-3">
       <?php foreach ($stats as $label => $valor): ?>
       <div class="col-md-3">
-        <div class="card card-kpi p-3">
-          <div class="text-muted"><?= $label ?></div>
+        <div class="card card-kpi p-2 px-3">
+          <div class="text-muted small"><?= $label ?></div>
           <div class="display-6 fw-bold"><?= $valor ?></div>
         </div>
       </div>
